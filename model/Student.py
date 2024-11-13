@@ -1,6 +1,6 @@
 import hashlib
 class Student:
-    def __init__(self, idStudents, nameStudent, email, password, course, yearBirth, specialized, phone, gender, image_path=None):
+    def __init__(self, idStudents, nameStudent, email, password, course, yearBirth, specialized, phone, gender,otp,otp_timestamp ,image_path=None):
         self.idStudents = idStudents
         self.nameStudent = nameStudent
         self.email = email
@@ -10,6 +10,8 @@ class Student:
         self.specialized = specialized
         self.phone = phone
         self.gender = gender
+        self.otp = otp
+        self.otp_timestamp = otp_timestamp
         self.image_path = image_path  # Add this line
 
     def to_dict(self):
@@ -22,6 +24,8 @@ class Student:
             "specialized": self.specialized,
             "phone": self.phone,
             "gender": self.gender,
+            "otp":self.otp,
+            "otp_timestamp":self.otp_timestamp,
             "image_path": self.image_path  # Include image_path in the dictionary
         }
 
